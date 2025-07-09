@@ -10,15 +10,17 @@ A beginner-friendly machine learning project to predict customer churn using cla
 
 •	Model training using:
 
-o	Decision Tree
+    o	Decision Tree
 
-o	Random Forest
+    o	Random Forest
 
-o	XGBoost
+    o	XGBoost
 
 •	Evaluation metrics: Accuracy, Precision, Recall, F1-Score
 
 •	Model saved using Pickle for reuse
+
+
 
 
 📁 Files Included
@@ -30,6 +32,8 @@ o	XGBoost
 •	customer_churn_model.pkl – Trained Random Forest model
 
 ________________________________________
+
+
 🚀 How to Use
 
 1.	Clone this repo or download the files
@@ -38,21 +42,15 @@ ________________________________________
 4.	Use the trained model to make predictions on new customer data
 ________________________________________
 
+
+
 🧪 Sample Prediction Code
-
-python
-
-CopyEdit
 
 import pickle
 
-
 model = pickle.load(open("customer_churn_model.pkl", "rb"))
-
 sample_input = [[1, 0, 1, 0, 5, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 2, 1, 35.0, 180.5]]
-
 prediction = model.predict(sample_input)
-
 
 print("Will the customer churn?", "Yes" if prediction[0] == 1 else "No")
 
